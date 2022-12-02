@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner list</title>
+</head>
+<body style="background-color:coral; color:white;">
+
+<h1>List of owners</h1>
+{% for owner in owner_list %}
+<ul>
+    <li> <a href="{% url 'owner_details' owner.id %}" >{{owner.name}}</a></li>
+</ul>
+{% empty %}
+<p>No owners in database.</p>
+{% endfor %}
+
+
+</body>
+</html>

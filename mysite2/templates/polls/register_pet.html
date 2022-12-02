@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:coral">
+
+<form method="POST">
+    {% csrf_token %}
+    <h1>Tell us about yourself!</h1>
+    <br>
+    {{pet_form}}
+        <br>
+    <br>
+    <input type="submit" value="Submit">
+
+</form>
+
+<br>
+<br>
+<h2>Go to list of owners!</h2>
+<nav>
+    <button type="button"><a href="list_of_owners">Go</a></button>
+</nav>
+
+
+</body>
+</html>

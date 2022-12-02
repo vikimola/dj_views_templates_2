@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:coral">
+<div>
+    {% if owners_pets %}
+
+
+    <h2>Owner: {{owners_name}}</h2>
+    <p> Yos bitches</p>
+    {% for pet in owners_pets %}
+    <ul>
+        <li style="font-weight: bold;">Pet: {{pet.name}}</li>
+            <ul>
+                <li>Race: {{pet.race}}</li>
+                <li>Leg number: {{pet.leg_number}}</li>
+                <li>Age: {{pet.age}}</li>
+                <li>Do we like: {{pet.do_we_like}}</li>
+            </ul>
+    </ul>
+    {% endfor %}
+
+    {% else %}
+    <p>None</p>
+    {% endif %}
+
+</div>
+
+<br>
+<br>
+<h2>Go to homepage!</h2>
+<nav>
+    <button type="button"><a href="home">Go</a></button>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:coral">
+
+<div>
+    <h1> List of owners:</h1>
+
+    {% for owner in owner_list %}
+
+    <ul>
+        {% comment %}
+        <li> <a href="{% url 'owner_profile' owner_name=owner.name %}">{{owner.name}}</a></li>
+        {% endcomment %}
+        <li> <a href="list_of_owners/{{owner.id}}">{{owner.name}}</a></li>
+    </ul>
+
+        {% endfor %}
+
+</div>
+
+<br>
+<br>
+<h2>Register as owner!</h2>
+<nav>
+    <button type="button"><a href="add_owner">Go</a></button>
+</nav>
+<br>
+<br>
+<h2>Register your pet!</h2>
+<nav>
+    <button type="button"><a href="add_pet">Go</a></button>
+</nav>
+
+
+</body>
+</html>
